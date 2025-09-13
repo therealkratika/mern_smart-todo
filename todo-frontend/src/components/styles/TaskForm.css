@@ -1,0 +1,91 @@
+.taskform-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.taskform-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(to right, #f9fafb, transparent);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.taskform-header-icon {
+  font-size: 20px;
+}
+
+.taskform-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.taskform-content {
+  padding: 16px;
+}
+
+.taskform-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.taskform-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.taskform-field label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.taskform-field input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.taskform-field input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.taskform-dates {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.taskform-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #4b5563, #374151);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+
+.taskform-button:hover {
+  background-color: #2563eb; /* darker blue on hover */
+}
+
+.taskform-button .icon {
+  width: 20px; /* set desired size */
+  height: 20px;
+  object-fit: contain; /* keep aspect ratio */
+}

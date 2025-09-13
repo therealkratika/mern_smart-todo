@@ -1,0 +1,140 @@
+.task-card {
+  border-left: 4px solid transparent;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  transition: all 0.2s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.today {
+  border-left-color: #428aff; /* blue */
+  background: #e0f2ff;
+}
+
+.task-card.upcoming {
+  border-left-color: #22c55e; /* green */
+  background: #e6ffed;
+}
+
+.task-card.overdue {
+  border-left-color: #ef4444; /* red */
+  background: #ffe0e0;
+}
+
+.task-card.completed {
+  border-left-color: #9ca3af; /* gray */
+  background: #f3f4f6;
+  opacity: 0.7;
+}
+
+.task-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.task-title.line-through {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.task-dates {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.task-badges {
+  display: flex;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+
+.badge {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.badge.today {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge.overdue {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.completed {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.task-button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.task-button.done {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.task-button.done:hover {
+  background-color: #16a34a;
+}
+
+.task-button.undo {
+  background-color: #d1d5db;
+  color: #374151;
+}
+
+.task-button.undo:hover {
+  background-color: #9ca3af;
+}
+/* TaskCard.css */
+
+/* Delete button */
+.task-button.delete {
+  background-color: #e74c3c; /* red */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-button.delete:hover {
+  background-color: #c0392b; /* darker red on hover */
+  transform: scale(1.05);
+}
+
+/* Optional: add some spacing from the Done/Undo button */
+.task-card-content .task-button.delete {
+  margin-left: 8px;
+}
+

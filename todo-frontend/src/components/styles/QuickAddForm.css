@@ -1,0 +1,87 @@
+.quickadd-container {
+  margin-bottom: 24px;
+}
+
+.quickadd-button {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.quickadd-button:hover {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+}
+
+.quickadd-card {
+  border: 2px solid #bfdbfe;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, #eff6ff, #ede9fe);
+  padding: 16px;
+}
+
+.quickadd-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+.quickadd-header h3 {
+  margin: 0;
+}
+
+.quickadd-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quickadd-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.quickadd-form input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.quickadd-submit {
+  padding: 8px 12px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quickadd-submit:hover {
+  background-color: #1d4ed8;
+}
+
+.quickadd-cancel {
+  padding: 8px 12px;
+  border: 1px solid #bfdbfe;
+  background: white;
+  border-radius: 6px;
+  color: #1e40af;
+  cursor: pointer;
+}
+
+.quickadd-cancel:hover {
+  background: #e0f2fe;
+}
