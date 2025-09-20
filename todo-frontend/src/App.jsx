@@ -5,7 +5,7 @@ import TaskSection from "./components/TaskSection";
 import QuickAddForm from "./components/QuickAddForm";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL = "https://mern-smart-todo.onrender.com/api/tasks";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
