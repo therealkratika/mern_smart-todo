@@ -1,56 +1,119 @@
+/* Darkened Glass Backdrop */
 .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation: modalFadeIn 0.2s ease-out forwards;
 }
 
+/* Floating Modal Dialog Card */
 .modal-card {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 12px;
+  background: #ffffff;
+  padding: 24px 32px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  animation: modalScaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .modal-message {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.4;
 }
 
+/* Action Button Container */
 .modal-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
+/* Confirm Action (Primary Indigo) */
 .modal-confirm {
-  background-color: #688bf3; /* red */
-  color: rgb(0, 0, 0);
+  flex: 1;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-confirm:hover {
-  background-color: #62c9fd;
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.35);
 }
 
+.modal-confirm:active {
+  transform: translateY(0);
+}
+
+/* Cancel Action (Clean Neutral Gray) */
 .modal-cancel {
-  background-color: #ff4e54; /* light gray */
-  border: none;
-  padding: 8px 16px;
+  flex: 1;
+  background-color: #ffffff;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border: 1px solid #cbd5e1;
+  padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .modal-cancel:hover {
-  background-color: #52e482;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+/* Optional Danger Destructive State (Use .modal-confirm.danger in JS if deleting) */
+.modal-confirm.danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.25);
+}
+
+.modal-confirm.danger:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+/* Keyframe Animations */
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
