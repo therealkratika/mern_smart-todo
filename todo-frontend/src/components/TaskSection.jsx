@@ -1,4 +1,5 @@
 import React from "react";
+import { Sparkles, ClipboardCheck, Pin } from "lucide-react";
 import TaskCard from "./TaskCard.jsx"; 
 import upcominglogo from "../assets/calendar.png";
 import todayslogo from "../assets/flash.png";
@@ -12,9 +13,9 @@ export default function TaskSection({ title, tasks, isToday = false, onToggleCom
 
   const getIcon = () => {
     if (title.includes("Today")) return <img src={todayslogo} alt="Today" className="section-icon" />;
-    if (title.includes("Upcoming")) return <img src= {upcominglogo} alt="Upcoming" className="section-icon" />;
-    if (title.includes("Completed")) return <img src={approved} alt="completed" className="section-icon" />;;
-    return "📌";
+    if (title.includes("Upcoming")) return <img src={upcominglogo} alt="Upcoming" className="section-icon" />;
+    if (title.includes("Completed")) return <img src={approved} alt="Completed" className="section-icon" />;
+    return <Pin className="section-icon lucide-icon" size={20} />;
   };
 
   const getSectionColorClass = () => {
@@ -32,7 +33,13 @@ export default function TaskSection({ title, tasks, isToday = false, onToggleCom
             {getIcon()} {title} <span className="task-count">{tasks.length}</span>
           </h3>
           <div className="task-empty">
-            <div className="task-empty-icon">{isToday ? "🌟" : "📋"}</div>
+            <div className="task-empty-icon">
+              {isToday ? (
+                <Sparkles className="empty-state-icon" size={38} color="#6366f1" />
+              ) : (
+                <ClipboardCheck className="empty-state-icon" size={38} color="#10b981" />
+              )}
+            </div>
             <p>{isToday ? "Ready to conquer the day!" : "All caught up!"}</p>
             <p className="task-empty-sub">No tasks {isToday ? "for today" : "upcoming"}</p>
           </div>
